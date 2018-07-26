@@ -4,7 +4,7 @@ This framework contains libraries which can be used to simplify the process of .
 <ul>
   <li>
     <h4>Ak.Framework.Core</h4>
-    This library has some basic functionality which is used further used in other libraries. For example it has different extensions for type conversion, linq, basic comparers and enums.
+    This library has some basic functionality which is used further in other libraries. For example it has different extensions for type conversion, linq, basic comparers and enums.
   </li>
 </ul>
 
