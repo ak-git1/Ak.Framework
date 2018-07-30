@@ -34,3 +34,5 @@ This framework contains libraries which can be used to simplify the process of .
 </ul>
 
 By the way source comments are in Russian right now. May be later I'll translate them to English.
+
+For the detailed description of methods and the way you can use these libs, please look thorugh the xml description either attached to the nuget build or in the source code.
