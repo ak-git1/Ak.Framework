@@ -488,6 +488,29 @@ namespace Ak.Framework.Core.Extensions
         }
 
         /// <summary>
+        /// Проверка на вхождение строки в исходную строку
+        /// </summary>
+        /// <param name="source">Строка</param>
+        /// <param name="stringToCheck">Строка, вхождение которой проверяется</param>
+        /// <param name="comp">Режим проверки</param>
+        /// <returns></returns>
+        public static bool Contains(this string source, string stringToCheck, StringComparison comp)
+        {
+            return source?.IndexOf(stringToCheck, comp) >= 0;
+        }
+
+        /// <summary>
+        /// Проверка на вхождение строки в исходную строку
+        /// </summary>
+        /// <param name="source">Строка</param>
+        /// <param name="stringToCheck">Строка, вхождение которой проверяется</param>
+        /// <returns></returns>
+        public static bool Contains(this string source, string stringToCheck)
+        {
+            return source.Contains(stringToCheck, StringComparison.OrdinalIgnoreCase);
+        }
+
+        /// <summary>
         /// Удаление html тегов
         /// </summary>
         /// <param name="str">Строка</param>
