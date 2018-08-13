@@ -28,8 +28,14 @@ This framework contains libraries which can be used to simplify the process of .
   <li>
     <h4>Ak.Framework.Threading</h4>
     In this library several classes for working with threads are available.
-        <br/><br/>
+    <br/><br/>
     This library is available at Nuget as <a href="https://www.nuget.org/packages/Ak.Framework.Threading">Ak.Framework.Threading</a>.
+  </li>
+  <li>
+    <h4>Ak.Framework.Wpf</h4>
+    This library provides some useful classes for working with WPF.
+    <br/><br/>
+    This library is available at Nuget as <a href="https://www.nuget.org/packages/Ak.Framework.Wpf">Ak.Framework.Wpf</a>.
   </li>
 </ul>
 
