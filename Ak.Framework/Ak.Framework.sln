@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ak.Framework.Imaging", "Ak.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ak.Framework.Morphology", "Ak.Framework.Morphology\Ak.Framework.Morphology.csproj", "{4EEBAABE-CDA9-439E-9E2B-1FCBE43D8E08}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ak.Framework.Wpf", "Ak.Framework.Wpf\Ak.Framework.Wpf.csproj", "{831BEAC3-CD60-4BD1-A8F4-CB4B6AE96AC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{4EEBAABE-CDA9-439E-9E2B-1FCBE43D8E08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EEBAABE-CDA9-439E-9E2B-1FCBE43D8E08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EEBAABE-CDA9-439E-9E2B-1FCBE43D8E08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{831BEAC3-CD60-4BD1-A8F4-CB4B6AE96AC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{831BEAC3-CD60-4BD1-A8F4-CB4B6AE96AC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{831BEAC3-CD60-4BD1-A8F4-CB4B6AE96AC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{831BEAC3-CD60-4BD1-A8F4-CB4B6AE96AC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
