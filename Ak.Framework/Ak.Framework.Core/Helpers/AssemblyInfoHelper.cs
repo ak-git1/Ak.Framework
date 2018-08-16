@@ -29,7 +29,7 @@ namespace Ak.Framework.Core.Helpers
         /// </summary>
         public static DateTime GetMainAssemblyCreationDate()
         {
-            return File.GetCreationTime(Assembly.GetExecutingAssembly().Location);
+            return File.GetCreationTime(Assembly.GetEntryAssembly().Location);
         }
 
         /// <summary>
@@ -37,16 +37,15 @@ namespace Ak.Framework.Core.Helpers
         /// </summary>
         public static DateTime GetMainAssemblyModifyDate()
         {
-            return File.GetLastWriteTime(Assembly.GetExecutingAssembly().Location);
+            return File.GetLastWriteTime(Assembly.GetEntryAssembly().Location);
         }
 
         /// <summary>
         /// Получение версии основной сборки
         /// </summary>
-
         public static string GetMainAssemblyVersion()
         {
-            return Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            return Assembly.GetEntryAssembly().GetName().Version.ToString();
         }
 
         /// <summary>
