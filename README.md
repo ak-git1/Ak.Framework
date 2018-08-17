@@ -33,7 +33,7 @@ This framework contains libraries which can be used to simplify the process of .
   </li>
   <li>
     <h4>Ak.Framework.Wpf</h4>
-    This library provides some useful classes for working with WPF.
+    This library provides some useful classes for working with WPF. For example functionality for working with and binding properties and commands included. 
     <br/><br/>
     This library is available at Nuget as <a href="https://www.nuget.org/packages/Ak.Framework.Wpf">Ak.Framework.Wpf</a>.
   </li>
