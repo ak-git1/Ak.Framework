@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\NotifyCommand.cs" />
+    <Compile Include="Converters\GenericMultiValueConverter.cs" />
     <Compile Include="Interfaces\INotifyCommand.cs" />
     <Compile Include="Interfaces\IShowDialogAgent.cs" />
     <Compile Include="Interfaces\IViewModel.cs" />
