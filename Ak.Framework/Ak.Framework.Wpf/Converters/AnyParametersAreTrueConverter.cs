@@ -1,12 +1,15 @@
 ﻿using System;
+using System.Globalization;
+using System.Linq;
+using System.Windows.Data;
 
 namespace Ak.Framework.Wpf.Converters
 {
     /// <summary>
-    /// Конвертер множественного набора значений, возвращающий оригинальный набор значений
+    /// Конвертер возвращающий True, если хотя бы одно значение True
     /// </summary>
     /// <seealso cref="Ak.Framework.Wpf.Converters.MultiValueConverterBase" />
-    public class GenericMultiValueConverter : MultiValueConverterBase
+    public class AnyParametersAreTrueConverter : MultiValueConverterBase
     {
         /// <summary>
         /// Конвертация значений
@@ -16,9 +19,16 @@ namespace Ak.Framework.Wpf.Converters
         /// <param name="parameter">Параметр конвертации</param>
         /// <param name="culture">Локаль</param>
         /// <returns></returns>
-        public override object Convert(object[] values, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        public override object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
         {
-            return values.Clone();
+            try
+            {
+                return values.OfType<bool>().Any<bool>(v => v);
+            }
+            catch
+            {
+                return Binding.DoNothing;
+            }
         }
 
         /// <summary>
@@ -29,10 +39,10 @@ namespace Ak.Framework.Wpf.Converters
         /// <param name="parameter">Параметр конвертации</param>
         /// <param name="culture">Локаль</param>
         /// <returns></returns>
-        /// <exception cref="NotImplementedException"></exception>
-        public override object[] ConvertBack(object value, Type[] targetTypes, object parameter, System.Globalization.CultureInfo culture)
+        /// <exception cref="NotImplementedException">AllParametersAreTrueConverter</exception>
+        public override object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException("AllParametersAreTrueConverter");
         }
     }
 }
