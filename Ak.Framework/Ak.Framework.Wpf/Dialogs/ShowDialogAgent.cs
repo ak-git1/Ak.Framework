@@ -2,7 +2,7 @@
 using System.Windows.Threading;
 using Ak.Framework.Wpf.Interfaces;
 
-namespace Ak.Framework.Wpf
+namespace Ak.Framework.Wpf.Dialogs
 {
     /// <summary>
     /// Класс для отображения диалоговых окон

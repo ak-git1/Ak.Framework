@@ -55,12 +55,13 @@
   <ItemGroup>
     <Compile Include="Commands\NotifyCommand.cs" />
     <Compile Include="Converters\GenericMultiValueConverter.cs" />
+    <Compile Include="Dialogs\ShowDialogButtonHelper.cs" />
     <Compile Include="Interfaces\INotifyCommand.cs" />
     <Compile Include="Interfaces\IShowDialogAgent.cs" />
     <Compile Include="Interfaces\IViewModel.cs" />
     <Compile Include="Listeners\BindingErrorTraceListener.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ShowDialogAgent.cs" />
+    <Compile Include="Dialogs\ShowDialogAgent.cs" />
     <Compile Include="ViewModels\DisposableViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
   </ItemGroup>
@@ -72,6 +73,9 @@
       <Project>{c4255df0-e0d8-48f4-aa50-5aa018ebd47e}</Project>
       <Name>Ak.Framework.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
