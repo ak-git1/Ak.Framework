@@ -79,10 +79,14 @@
     <Compile Include="Converters\ValueToFormatStringConverter.cs" />
     <Compile Include="Converters\WinFormsColorToWpfColorConverter.cs" />
     <Compile Include="Dialogs\ShowDialogButtonHelper.cs" />
-    <Compile Include="Interfaces\INotifyCommand.cs" />
-    <Compile Include="Interfaces\IShowDialogAgent.cs" />
-    <Compile Include="Interfaces\IViewModel.cs" />
+    <Compile Include="Commands\Interfaces\INotifyCommand.cs" />
+    <Compile Include="Dialogs\Interfaces\IShowDialogAgent.cs" />
+    <Compile Include="Messaging\Interfaces\IMessenger.cs" />
+    <Compile Include="Messaging\Message.cs" />
+    <Compile Include="Messaging\MessageHandler.cs" />
+    <Compile Include="ViewModels\Interfaces\IViewModel.cs" />
     <Compile Include="Listeners\BindingErrorTraceListener.cs" />
+    <Compile Include="Messaging\Messenger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Dialogs\ShowDialogAgent.cs" />
     <Compile Include="ViewModels\DisposableViewModel.cs" />

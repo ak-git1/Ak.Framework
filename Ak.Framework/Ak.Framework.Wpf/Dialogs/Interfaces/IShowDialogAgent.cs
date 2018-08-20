@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace Ak.Framework.Wpf.Interfaces
+namespace Ak.Framework.Wpf.Dialogs.Interfaces
 {
     /// <summary>
     /// Интерфейс класса для отображения диалоговых окон

@@ -5,7 +5,7 @@ using System.Windows.Input;
 using System.Windows.Threading;
 using Ak.Framework.Core.Events;
 using Ak.Framework.Core.Helpers;
-using Ak.Framework.Wpf.Interfaces;
+using Ak.Framework.Wpf.Commands.Interfaces;
 using NLog;
 
 namespace Ak.Framework.Wpf.Commands

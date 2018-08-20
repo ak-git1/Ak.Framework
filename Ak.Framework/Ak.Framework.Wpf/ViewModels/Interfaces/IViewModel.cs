@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Ak.Framework.Wpf.Interfaces
+namespace Ak.Framework.Wpf.ViewModels.Interfaces
 {
     /// <summary>
     /// Интерфейс ViewModel

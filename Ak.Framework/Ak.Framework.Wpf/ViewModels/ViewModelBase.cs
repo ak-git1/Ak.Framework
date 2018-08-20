@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
-using Ak.Framework.Wpf.Interfaces;
+using Ak.Framework.Wpf.ViewModels.Interfaces;
 
 namespace Ak.Framework.Wpf.ViewModels
 {

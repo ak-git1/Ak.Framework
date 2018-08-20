@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace Ak.Framework.Wpf.Interfaces
+namespace Ak.Framework.Wpf.Commands.Interfaces
 {
     /// <summary>
     /// Интерфейс команды с нотификацией

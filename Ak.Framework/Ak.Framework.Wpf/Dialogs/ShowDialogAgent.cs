@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Threading;
-using Ak.Framework.Wpf.Interfaces;
+using Ak.Framework.Wpf.Dialogs.Interfaces;
 
 namespace Ak.Framework.Wpf.Dialogs
 {
