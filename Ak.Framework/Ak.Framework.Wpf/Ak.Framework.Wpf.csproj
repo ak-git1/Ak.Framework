@@ -55,6 +55,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\NotifyCommand.cs" />
+    <Compile Include="Controls\DragAndDropListBox.cs" />
+    <Compile Include="Controls\VirtualizingWrapPanel.cs" />
     <Compile Include="Converters\AllParametersAreTrueConverter.cs" />
     <Compile Include="Converters\AnyParametersAreTrueConverter.cs" />
     <Compile Include="Converters\BitmapToBitmapSourceConverter.cs" />
