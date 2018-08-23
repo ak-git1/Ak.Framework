@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using System.Linq;
-using System.Windows.Data;
+using static System.Windows.Data.Binding;
 
 namespace Ak.Framework.Wpf.Converters
 {
@@ -23,11 +23,11 @@ namespace Ak.Framework.Wpf.Converters
         {
             try
             {
-                return values.OfType<bool>().Any<bool>(v => v);
+                return values.OfType<bool>().Any(v => v);
             }
             catch
             {
-                return Binding.DoNothing;
+                return DoNothing;
             }
         }
 

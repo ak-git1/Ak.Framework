@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Globalization;
-using System.Windows.Data;
+using static System.Windows.Data.Binding;
 
 namespace Ak.Framework.Wpf.Converters
 {
@@ -26,7 +26,7 @@ namespace Ak.Framework.Wpf.Converters
             }
             catch
             {
-                return Binding.DoNothing;
+                return DoNothing;
             }
         }
 
@@ -46,7 +46,7 @@ namespace Ak.Framework.Wpf.Converters
             }
             catch
             {
-                return Binding.DoNothing;
+                return DoNothing;
             }
         }
     }

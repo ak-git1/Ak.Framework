@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Globalization;
-using System.Windows.Data;
+using static System.Windows.Data.Binding;
 
 namespace Ak.Framework.Wpf.Converters
 {
@@ -33,7 +33,7 @@ namespace Ak.Framework.Wpf.Converters
         /// <returns></returns>
         public override object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return Binding.DoNothing;
+            return DoNothing;
         }
     }
 }

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Globalization;
-using System.Windows.Data;
 using Ak.Framework.Core.Extensions;
 using Ak.Framework.Core.Helpers;
+using static System.Windows.Data.Binding;
 
 namespace Ak.Framework.Wpf.Converters
 {
@@ -29,7 +29,7 @@ namespace Ak.Framework.Wpf.Converters
             }
             catch (Exception)
             {
-                return Binding.DoNothing;
+                return DoNothing;
             }
         }
 
@@ -49,7 +49,7 @@ namespace Ak.Framework.Wpf.Converters
             }
             catch (Exception)
             {
-                return Binding.DoNothing;
+                return DoNothing;
             }
         }
 

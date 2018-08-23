@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Globalization;
 using System.IO;
-using System.Windows.Data;
 using Ak.Framework.Core.Extensions;
+using static System.Windows.Data.Binding;
 
 namespace Ak.Framework.Wpf.Converters
 {
@@ -28,7 +28,7 @@ namespace Ak.Framework.Wpf.Converters
             }
             catch (Exception ex)
             {
-                return Binding.DoNothing;
+                return DoNothing;
             }
         }
 
@@ -50,7 +50,7 @@ namespace Ak.Framework.Wpf.Converters
             }
             catch (Exception ex)
             {
-                directoryInfo = Binding.DoNothing;
+                directoryInfo = DoNothing;
             }
             return directoryInfo;
         }
