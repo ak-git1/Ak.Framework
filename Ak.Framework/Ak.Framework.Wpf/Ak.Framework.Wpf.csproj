@@ -63,8 +63,10 @@
     <Compile Include="Converters\BoolToInvisibilityConverter.cs" />
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="Converters\ColorToSolidColorBrushConverter.cs" />
+    <Compile Include="Converters\DoubleToPercentValueConverter.cs" />
     <Compile Include="Converters\EmptyStringToVisibilityConverter.cs" />
     <Compile Include="Converters\EnumDescriptionConverter.cs" />
+    <Compile Include="Converters\EnumToBoolConverter.cs" />
     <Compile Include="Converters\EnumToStringConverter.cs" />
     <Compile Include="Converters\FloatToPercentDoubleConverter.cs" />
     <Compile Include="Converters\FloatToPercentIntConverter.cs" />
@@ -72,12 +74,15 @@
     <Compile Include="Converters\IntToBoolConverter.cs" />
     <Compile Include="Converters\MultiValueConverterBase.cs" />
     <Compile Include="Converters\NotNullToBoolConverter.cs" />
+    <Compile Include="Converters\NullToInvisibilityConverter.cs" />
+    <Compile Include="Converters\NullToVisibilityConverter.cs" />
     <Compile Include="Converters\ReverseBoolConverter.cs" />
     <Compile Include="Converters\StringToDirectoryInfoConverter.cs" />
     <Compile Include="Converters\StringToLowerConverter.cs" />
     <Compile Include="Converters\StringToUpperConverter.cs" />
     <Compile Include="Converters\StringToUriConverter.cs" />
     <Compile Include="Converters\ValueConverterBase.cs" />
+    <Compile Include="Converters\ValueConverterHelper.cs" />
     <Compile Include="Converters\ValueToFormatStringConverter.cs" />
     <Compile Include="Converters\WinFormsColorToWpfColorConverter.cs" />
     <Compile Include="Dialogs\ShowDialogButtonHelper.cs" />
