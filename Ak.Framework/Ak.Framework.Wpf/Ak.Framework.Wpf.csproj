@@ -90,6 +90,7 @@
     <Compile Include="Dialogs\Interfaces\IShowDialogAgent.cs" />
     <Compile Include="Binding\EventBindingExtension.cs" />
     <Compile Include="Extensions\DependencyObjectExtensions.cs" />
+    <Compile Include="Helpers\RefreshUiHelper.cs" />
     <Compile Include="Messaging\Interfaces\IMessenger.cs" />
     <Compile Include="Messaging\Message.cs" />
     <Compile Include="Messaging\MessageHandler.cs" />
@@ -110,8 +111,6 @@
       <Name>Ak.Framework.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Helpers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
