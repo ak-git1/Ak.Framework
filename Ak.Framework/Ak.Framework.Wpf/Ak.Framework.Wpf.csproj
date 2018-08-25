@@ -85,12 +85,13 @@
     <Compile Include="Converters\ValueConverterHelper.cs" />
     <Compile Include="Converters\ValueToFormatStringConverter.cs" />
     <Compile Include="Converters\WinFormsColorToWpfColorConverter.cs" />
+    <Compile Include="Culture\CultureResourcesBase.cs" />
     <Compile Include="Dialogs\ShowDialogButtonHelper.cs" />
     <Compile Include="Commands\Interfaces\INotifyCommand.cs" />
     <Compile Include="Dialogs\Interfaces\IShowDialogAgent.cs" />
     <Compile Include="Binding\EventBindingExtension.cs" />
     <Compile Include="Extensions\DependencyObjectExtensions.cs" />
-    <Compile Include="Helpers\RefreshUiHelper.cs" />
+    <Compile Include="Culture\RefreshUiHelper.cs" />
     <Compile Include="Messaging\Interfaces\IMessenger.cs" />
     <Compile Include="Messaging\Message.cs" />
     <Compile Include="Messaging\MessageHandler.cs" />

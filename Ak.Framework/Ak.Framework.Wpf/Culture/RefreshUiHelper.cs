@@ -8,7 +8,7 @@ using System.Windows.Documents;
 using System.Windows.Markup.Primitives;
 using System.Windows.Media;
 
-namespace Ak.Framework.Wpf.Helpers
+namespace Ak.Framework.Wpf.Culture
 {
     /// <summary>
     /// Обновляет зависимости и контролы.
