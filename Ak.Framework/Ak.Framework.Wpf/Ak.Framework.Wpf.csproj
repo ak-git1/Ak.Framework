@@ -54,6 +54,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Binding\DataGridColumnsBehavior.cs" />
     <Compile Include="Commands\NotifyCommand.cs" />
     <Compile Include="Controls\DragAndDropListBox.cs" />
     <Compile Include="Controls\VirtualizingWrapPanel.cs" />
