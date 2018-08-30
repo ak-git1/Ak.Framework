@@ -158,7 +158,7 @@ namespace Ak.Framework.Core.Extensions
         /// <param name="number">Число</param>
         /// <param name="isCaps">Заглавная буква</param>
         /// <returns></returns>
-        private static string ToLetter(this int number, bool isCaps = false)
+        public static string ToLetter(this int number, bool isCaps = false)
         {
             char c = (char)((isCaps ? 65 : 97) + (number - 1));
             return c.ToString();
