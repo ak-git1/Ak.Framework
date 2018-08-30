@@ -18,6 +18,16 @@ namespace Ak.Framework.Core.Extensions
         }
 
         /// <summary>
+        /// Итератор, возвращающий индекс текущего значения коллекции
+        /// </summary>
+        public static void Each<T>(this IEnumerable<T> source, Action<T, int> action)
+        {
+            int i = 0;
+            foreach (T e in source)
+                action(e, i++);
+        }
+
+        /// <summary>
         /// Расширение для метода Where, которое обрабатывает в т.ч. пустые коллекции.
         /// </summary>
         public static IEnumerable<TSource> WhereEx<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)

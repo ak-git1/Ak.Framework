@@ -151,5 +151,17 @@ namespace Ak.Framework.Core.Extensions
         {
             return number % 2 != 0;
         }
+
+        /// <summary>
+        /// Преобразование числа в букву
+        /// </summary>
+        /// <param name="number">Число</param>
+        /// <param name="isCaps">Заглавная буква</param>
+        /// <returns></returns>
+        private static string ToLetter(this int number, bool isCaps = false)
+        {
+            char c = (char)((isCaps ? 65 : 97) + (number - 1));
+            return c.ToString();
+        }
     }
 }
