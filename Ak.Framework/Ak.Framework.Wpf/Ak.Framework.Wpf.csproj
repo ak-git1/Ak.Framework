@@ -81,6 +81,7 @@
     <Compile Include="Converters\StringToDirectoryInfoConverter.cs" />
     <Compile Include="Converters\StringToLowerConverter.cs" />
     <Compile Include="Converters\StringToUpperConverter.cs" />
+    <Compile Include="Converters\StringToBitmapImageConverter.cs" />
     <Compile Include="Converters\StringToUriConverter.cs" />
     <Compile Include="Converters\ValueConverterBase.cs" />
     <Compile Include="Converters\ValueConverterHelper.cs" />

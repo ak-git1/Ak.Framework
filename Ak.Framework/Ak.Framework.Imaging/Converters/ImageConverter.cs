@@ -64,7 +64,7 @@ namespace Ak.Framework.Imaging.Converters
         {
             byte[] bytes = ConvertToBytes(image);
             using (MemoryStream memoryStream = new MemoryStream(bytes))
-                return BitmapImageHelper.GetBitmapFromStream(memoryStream);
+                return BitmapImageHelper.GetBitmapImageFromStream(memoryStream);
         }
 
         #endregion
