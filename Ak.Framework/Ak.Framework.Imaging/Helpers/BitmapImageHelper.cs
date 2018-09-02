@@ -18,6 +18,7 @@ namespace Ak.Framework.Imaging.Helpers
         {
             BitmapImage bitmapImage = new BitmapImage();
             bitmapImage.BeginInit();
+            bitmapImage.CreateOptions = BitmapCreateOptions.IgnoreImageCache;
             bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
             bitmapImage.StreamSource = stream;
             bitmapImage.EndInit();
@@ -34,6 +35,7 @@ namespace Ak.Framework.Imaging.Helpers
         {
             BitmapImage bitmapImage = new BitmapImage();
             bitmapImage.BeginInit();
+            bitmapImage.CreateOptions = BitmapCreateOptions.IgnoreImageCache;
             bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
             bitmapImage.UriSource = new Uri(path);
             bitmapImage.EndInit();
