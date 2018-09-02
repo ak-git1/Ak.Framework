@@ -838,7 +838,7 @@ namespace Ak.Framework.Core.Extensions
         /// </summary>
         /// <param name="str">Строка</param>
         /// <returns></returns>
-        public static string RemoveAllSymbolsExceptLetter(this string str)
+        public static string RemoveAllSymbolsExceptLetters(this string str)
         {
             return new string(str.Where(char.IsLetter).ToArray());
         }
