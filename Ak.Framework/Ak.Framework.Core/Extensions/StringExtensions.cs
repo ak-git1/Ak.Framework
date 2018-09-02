@@ -96,6 +96,11 @@ namespace Ak.Framework.Core.Extensions
             8
         };
 
+        /// <summary>
+        /// The extra spaces regex
+        /// </summary>
+        private static readonly Regex ExtraSpacesRegex = new Regex(@"\s\s+");
+
         #endregion
 
         #region Методы
@@ -836,6 +841,16 @@ namespace Ak.Framework.Core.Extensions
         public static string RemoveAllSymbolsExceptLetter(this string str)
         {
             return new string(str.Where(char.IsLetter).ToArray());
+        }
+
+        /// <summary>
+        /// Удаление задвоенных пробелов
+        /// </summary>
+        /// <param name="str">Строка</param>
+        /// <returns></returns>
+        public static string RemoveExtraSpaces(this string str)
+        {           
+            return ExtraSpacesRegex.Replace(str, " ");
         }
 
         #endregion
