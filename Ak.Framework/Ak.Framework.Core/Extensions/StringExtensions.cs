@@ -789,12 +789,53 @@ namespace Ak.Framework.Core.Extensions
         /// <summary>
         /// Мягкое сравнение строк (только алфавитные символы, приведённые в нижний регистр и цифры)
         /// </summary>
-        /// <param name="str1"></param>
-        /// <param name="str2"></param>
+        /// <param name="str1">Строка 1</param>
+        /// <param name="str2">Строка 2</param>
         /// <returns></returns>
         public static bool SoftStringEqual(this string str1, string str2)
         {
             return str1.GetToCompareString() == str2.GetToCompareString();
+        }
+
+        /// <summary>
+        /// Удаление пунктуации
+        /// </summary>
+        /// <param name="str">Строка</param>
+        /// <returns></returns>
+        public static string RemovePunctuation(this string str)
+        {
+            return new string(str.Where(c => !char.IsPunctuation(c)).ToArray());
+        }
+
+        /// <summary>
+        /// Удаление разделителя строки
+        /// </summary>
+        /// <param name="str">Строка</param>
+        /// <param name="replacementString">Строка замены</param>
+        /// <returns></returns>
+        public static string RemoveLineBreaks(this string str, string replacementString = " ")
+        {
+            return str.Replace(Environment.NewLine, replacementString);
+        }
+
+        /// <summary>
+        /// Удаление всех символов кроме чисел
+        /// </summary>
+        /// <param name="str">Строка</param>
+        /// <returns></returns>
+        public static string RemoveAllSymbolsExceptNumbers(this string str)
+        {
+            return new string(str.Where(char.IsNumber).ToArray());
+        }
+
+        /// <summary>
+        /// Удаление всех символов кроме букв
+        /// </summary>
+        /// <param name="str">Строка</param>
+        /// <returns></returns>
+        public static string RemoveAllSymbolsExceptLetter(this string str)
+        {
+            return new string(str.Where(char.IsLetter).ToArray());
         }
 
         #endregion
