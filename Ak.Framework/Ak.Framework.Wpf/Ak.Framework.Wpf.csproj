@@ -68,6 +68,7 @@
     <Compile Include="Converters\EmptyStringToVisibilityConverter.cs" />
     <Compile Include="Converters\EnumDescriptionConverter.cs" />
     <Compile Include="Converters\EnumToBoolConverter.cs" />
+    <Compile Include="Converters\EnumToVisibilityConverter.cs" />
     <Compile Include="Converters\EnumToStringConverter.cs" />
     <Compile Include="Converters\FloatToPercentDoubleConverter.cs" />
     <Compile Include="Converters\FloatToPercentIntConverter.cs" />
