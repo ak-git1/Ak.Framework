@@ -6,10 +6,10 @@ namespace Ak.Framework.Wpf.Converters
 {
     /// <summary>
     /// Преобразует значение типа Enum в Visibility
-    /// (при совпадении значений возрващает результат Visibility.Collapsed)
+    /// (при совпадении значений возрващает результат Visibility.Hidden)
     /// </summary>
     /// <seealso cref="Ak.Framework.Wpf.Converters.ValueConverterBase" />
-    public class EnumToVisibilityConverter : ValueConverterBase
+    public class EnumToVisibilityHiddenConverter : ValueConverterBase
     {
         /// <summary>
         /// Конвертация значений
@@ -26,7 +26,7 @@ namespace Ak.Framework.Wpf.Converters
             
             string str = value.ToString().ToLower();
             string str2 = parameter.ToString().ToLower();
-            return str == str2 ? Visibility.Collapsed : Visibility.Visible;
+            return str == str2 ? Visibility.Hidden : Visibility.Visible;
         }
 
         /// <summary>
