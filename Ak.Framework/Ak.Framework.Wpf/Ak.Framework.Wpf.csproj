@@ -75,6 +75,7 @@
     <Compile Include="Converters\FloatToPercentIntConverter.cs" />
     <Compile Include="Converters\GenericMultiValueConverter.cs" />
     <Compile Include="Converters\IntToBoolConverter.cs" />
+    <Compile Include="Converters\ListCountToSelectedIndeConverter.cs" />
     <Compile Include="Converters\MultiValueConverterBase.cs" />
     <Compile Include="Converters\NotNullToBoolConverter.cs" />
     <Compile Include="Converters\NullToInvisibilityConverter.cs" />
