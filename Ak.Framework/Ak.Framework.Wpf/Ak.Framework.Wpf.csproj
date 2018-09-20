@@ -77,6 +77,7 @@
     <Compile Include="Converters\IntToBoolConverter.cs" />
     <Compile Include="Converters\ListCountToSelectedIndeConverter.cs" />
     <Compile Include="Converters\MultiValueConverterBase.cs" />
+    <Compile Include="Converters\NullToBoolConverter.cs" />
     <Compile Include="Converters\NotNullToBoolConverter.cs" />
     <Compile Include="Converters\NullToInvisibilityConverter.cs" />
     <Compile Include="Converters\NullToVisibilityConverter.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Converters\StringToUriConverter.cs" />
     <Compile Include="Converters\ValueConverterBase.cs" />
     <Compile Include="Converters\ValueConverterHelper.cs" />
+    <Compile Include="Converters\ValueToNullConverter.cs" />
     <Compile Include="Converters\ValueToFormatStringConverter.cs" />
     <Compile Include="Converters\WinFormsColorToWpfColorConverter.cs" />
     <Compile Include="Culture\CultureResourcesBase.cs" />
