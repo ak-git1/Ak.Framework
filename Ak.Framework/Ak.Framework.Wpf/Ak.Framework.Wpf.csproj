@@ -99,6 +99,7 @@
     <Compile Include="Binding\EventBindingExtension.cs" />
     <Compile Include="Extensions\DependencyObjectExtensions.cs" />
     <Compile Include="Culture\RefreshUiHelper.cs" />
+    <Compile Include="Helpers\DataGridHelper.cs" />
     <Compile Include="Messaging\Interfaces\IMessenger.cs" />
     <Compile Include="Messaging\Message.cs" />
     <Compile Include="Messaging\MessageHandler.cs" />
