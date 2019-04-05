@@ -181,8 +181,7 @@ namespace Ak.Framework.Core.Extensions
         /// <returns></returns>
         public static DateTime EndOfWeek(this DateTime date)
         {
-            int delta = 7 - (int)date.DayOfWeek;
-            return date.AddDays(delta).EndOfDay();
+            return date.StartOfWeek().AddDays(6);
         }
 
         /// <summary>
@@ -231,8 +230,9 @@ namespace Ak.Framework.Core.Extensions
         /// <returns></returns>
         public static DateTime StartOfWeek(this DateTime date)
         {
-            int delta = 1 - (int)date.DayOfWeek;
-            return date.AddDays(delta).StartOfDay();
+            int weekDayNumber = date.DayOfWeek == DayOfWeek.Sunday ? 7 : (int)date.DayOfWeek;
+            int delta = weekDayNumber - (int)DayOfWeek.Monday;
+            return date.AddDays(-delta);
         }
 
         /// <summary>

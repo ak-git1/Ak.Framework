@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Ak.Framework.Core")]
+[assembly: AssemblyTitle("Ak.Framework.Tests.App")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("AkSoftware")]
-[assembly: AssemblyProduct("Ak.Framework.Core")]
-[assembly: AssemblyCopyright("Copyright © AkSoftware 2018")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("Ak.Framework.Tests.App")]
+[assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("c4255df0-e0d8-48f4-aa50-5aa018ebd47e")]
+[assembly: Guid("8cfc59ae-f476-4b49-969d-452cb1e2e7c6")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.5.3")]
-[assembly: AssemblyFileVersion("1.0.5.3")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
