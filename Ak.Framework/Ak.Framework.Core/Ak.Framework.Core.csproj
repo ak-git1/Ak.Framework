@@ -80,6 +80,7 @@
     <Compile Include="Extensions\XmlExtensions.cs" />
     <Compile Include="Helpers\ActionsHelper.cs" />
     <Compile Include="Helpers\AssemblyInfoHelper.cs" />
+    <Compile Include="Helpers\DateTimeHelper.cs" />
     <Compile Include="Helpers\EnumNamesHelper.cs" />
     <Compile Include="IO\DirectoryHelper.cs" />
     <Compile Include="IO\EncodedStringWriter.cs" />

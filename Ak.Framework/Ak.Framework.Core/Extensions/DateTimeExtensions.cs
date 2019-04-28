@@ -417,6 +417,7 @@ namespace Ak.Framework.Core.Extensions
         /// </summary>
         /// <param name="dateTime">Дата</param>
         /// <param name="months">Срок в месяцах [Допустимый шаг изменения длительности равен 0,5 месяца]</param>
+        /// <returns></returns>
         public static DateTime AddMonths(this DateTime dateTime, decimal? months)
         {
             int totalMonths = months.HasValue ? (int)months.Value : 0;
@@ -429,6 +430,20 @@ namespace Ak.Framework.Core.Extensions
             }
 
             return dateTime;
+        }
+
+        /// <summary>
+        /// Получение номера недели
+        /// </summary>
+        /// <param name="date">Дата</param>
+        /// <returns></returns>
+        public static int GetIso8601WeekOfYear(this DateTime date)
+        {
+            DayOfWeek day = CultureInfo.InvariantCulture.Calendar.GetDayOfWeek(date);
+            if (day >= DayOfWeek.Monday && day <= DayOfWeek.Wednesday)
+                date = date.AddDays(3);
+
+            return CultureInfo.InvariantCulture.Calendar.GetWeekOfYear(date, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
         }
     }
 }
