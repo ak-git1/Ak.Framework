@@ -377,14 +377,14 @@ namespace Ak.Framework.Core.Extensions
         /// Проверить валидность ИНН ЮЛ
         /// </summary>
         /// <param name="inn">ИНН</param>
-        public static bool ValidateJuridicalInn(this string inn)
+        public static bool  ValidateJuridicalInn(this string inn)
         {
             if (string.IsNullOrWhiteSpace(inn))
                 return false;
             char[] digits = inn.ToCharArray();
-            if (Regex.IsMatch(inn, "^\\d{10}$"))
-                return JuridicalInnCheckParams.Select((t, i) => (int) char.GetNumericValue(digits[i]) * t).Sum() % 11 %
-                       10 == (int) char.GetNumericValue(digits[9]);
+            if (Regex.IsMatch(inn, "(?=^\\d{10}$)(?!^\\d{2}[0]{8}$)"))
+                return JuridicalInnCheckParams.Select((t, i) => (int)char.GetNumericValue(digits[i]) * t).Sum() % 11 %
+                       10 == (int)char.GetNumericValue(digits[9]);
 
             return false;
         }
@@ -787,8 +787,7 @@ namespace Ak.Framework.Core.Extensions
         /// <returns></returns>
         public static string GetToCompareString(this string str)
         {
-            return
-                Regex.Replace(str ?? string.Empty, @"\W", string.Empty).ToLower();
+            return Regex.Replace(str ?? string.Empty, @"\W", string.Empty).ToLower().Replace("ё", "е");
         }
 
         /// <summary>
