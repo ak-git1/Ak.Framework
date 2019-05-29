@@ -91,6 +91,7 @@
     <Compile Include="IO\RemovableDrivesManager.cs" />
     <Compile Include="IO\StreamHelper.cs" />
     <Compile Include="Helpers\ReflectionHelper.cs" />
+    <Compile Include="Models\Week.cs" />
     <Compile Include="Utils\GarbageCollector.cs" />
     <Compile Include="Helpers\ListSerializationHelper.cs" />
     <Compile Include="Helpers\ThrowHelper.cs" />
