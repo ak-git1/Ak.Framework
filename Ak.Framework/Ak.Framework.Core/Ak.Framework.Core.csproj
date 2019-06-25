@@ -82,11 +82,16 @@
     <Compile Include="Helpers\AssemblyInfoHelper.cs" />
     <Compile Include="Helpers\DateTimeHelper.cs" />
     <Compile Include="Helpers\EnumNamesHelper.cs" />
+    <Compile Include="Helpers\ListHelper.cs" />
     <Compile Include="IO\DirectoryHelper.cs" />
     <Compile Include="IO\EncodedStringWriter.cs" />
+    <Compile Include="IO\FileSystemWatchers\Enums\FileSystemWatcherConnectionStates.cs" />
     <Compile Include="IO\Enums\PathTargetTypes.cs" />
     <Compile Include="IO\Extensions\FileInfoExtensions.cs" />
     <Compile Include="IO\Extensions\PathExtensions.cs" />
+    <Compile Include="IO\FileHelper.cs" />
+    <Compile Include="IO\FileSystemWatchers\EventArgs\ConnectionStateChangedEventArgs.cs" />
+    <Compile Include="IO\FileSystemWatchers\NetFileSystemWatcher.cs" />
     <Compile Include="IO\PathHelper.cs" />
     <Compile Include="IO\RemovableDrivesManager.cs" />
     <Compile Include="IO\StreamHelper.cs" />
