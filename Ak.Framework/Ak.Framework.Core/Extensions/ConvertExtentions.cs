@@ -288,6 +288,48 @@ namespace Ak.Framework.Core.Extensions
         }
 
         /// <summary>
+        /// Конвертировать в TimeSpan.
+        /// Позволяет устанавливать значения больше 24:00
+        /// </summary>
+        /// <param name="obj">Объект.</param>
+        /// <param name="defaultValue">Значение по умолчанию.</param>
+        /// <returns></returns>
+        public static TimeSpan ToTimeSpanEx(this object obj, TimeSpan defaultValue = default(TimeSpan))
+        {
+            return ToTimeSpanEx(obj, null) ?? defaultValue;
+        }
+
+        /// <summary>
+        /// Конвертировать в TimeSpan?.
+        /// Позволяет устанавливать значения больше 24:00, например, 25:00:00
+        /// </summary>
+        /// <param name="obj">Объект.</param>
+        /// <param name="defaultValue">Значение по умолчанию.</param>
+        /// <returns></returns>
+        public static TimeSpan? ToTimeSpanEx(this object obj, TimeSpan? defaultValue)
+        {
+            try
+            {
+                string[] strs = obj.ToStr().Split(':');
+                int hours = 0;
+                int minutes = 0;
+                int seconds = 0;
+                if (strs.Length >= 1)
+                    hours = strs[0].ToInt32();
+                if (strs.Length >= 2)
+                    minutes = strs[1].ToInt32();
+                if (strs.Length >= 3)
+                    seconds = strs[2].ToInt32();
+
+                return new TimeSpan(hours, minutes, seconds);
+            }
+            catch
+            {
+                return defaultValue;
+            }
+        }
+
+        /// <summary>
         /// Конвертировать в Enum
         /// </summary>
         /// <param name="obj">Объект.</param>

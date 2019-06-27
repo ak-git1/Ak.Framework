@@ -17,7 +17,6 @@ namespace Ak.Framework.Core.Extensions
     /// </summary>
     public static class StringExtensions
     {
-
         #region Переменные и константы
 
         /// <summary>
@@ -574,7 +573,7 @@ namespace Ak.Framework.Core.Extensions
         /// <returns></returns>
         public static string ToTimeView(this string str)
         {
-            return (str.Length == 1) ? $"0{str}" : str;
+            return str.Length == 1 ? $"0{str}" : str;
         }
 
         /// <summary>
@@ -853,6 +852,5 @@ namespace Ak.Framework.Core.Extensions
         }
 
         #endregion
-
     }
 }
