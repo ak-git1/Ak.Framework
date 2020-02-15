@@ -255,6 +255,41 @@ namespace Ak.Framework.Core.Extensions
         }
 
         /// <summary>
+        /// Преобразование в словарь
+        /// </summary>
+        /// <typeparam name="TKey">Тип ключа</typeparam>
+        /// <typeparam name="TValue">Тип значения</typeparam>
+        /// <param name="enumerable">Список</param>
+        /// <returns></returns>
+        public static Dictionary<TKey, TValue> ToDictionary<TKey, TValue>(this IEnumerable<KeyValuePair<TKey, TValue>> enumerable)
+        {
+            return enumerable?.ToDictionary(pair => pair.Key, pair => pair.Value);
+        }
+
+        /// <summary>
+        /// Умножение элементов списка
+        /// </summary>
+        /// <param name="enumerable">Список</param>
+        /// <param name="defaultValue">Значение по умолчанию</param>
+        /// <returns></returns>
+        public static double Multiply(this IEnumerable<double> enumerable, double defaultValue = 0)
+        {
+            double result = defaultValue;
+
+            int counter = 0;
+            foreach (double item in enumerable)
+            {
+                if (counter == 0)
+                    result = item;
+                else
+                    result *= item;
+                counter++;
+            }
+
+            return result;
+        }
+
+        /// <summary>
         /// Класс для сравнения элементов
         /// </summary>
         /// <typeparam name="TItem">Тип элемента для сравнения</typeparam>

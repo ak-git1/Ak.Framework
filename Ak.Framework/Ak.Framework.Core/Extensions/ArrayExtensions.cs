@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Ak.Framework.Core.Extensions
 {
@@ -23,6 +24,27 @@ namespace Ak.Framework.Core.Extensions
                     result.Add(i + indexShift, array[i]);
 
             return result;
+        }
+
+        /// <summary>
+        /// Преобразование массива в словарь с ключами из индексов
+        /// </summary>
+        /// <typeparam name="T">Тип</typeparam>
+        /// <param name="array">Массив</param>
+        /// <param name="itemCondition">Условие</param>
+        /// <returns></returns>
+        public static Dictionary<int, T> ArrayToDictionaryWithIndexInKey<T>(this T[] array, Predicate<T> itemCondition = null)
+        {
+            Dictionary<int, T> output = new Dictionary<int, T>();
+            for (int i = 0; i < array.Length; i++)
+            {
+                T item = array[i];
+                if (itemCondition == null)
+                    output.Add(i, item);
+                else if (itemCondition(item))
+                    output.Add(i, item);
+            }
+            return output;
         }
     }
 }

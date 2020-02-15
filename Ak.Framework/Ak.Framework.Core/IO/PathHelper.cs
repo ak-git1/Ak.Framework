@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Ak.Framework.Core.IO.Enums;
@@ -14,7 +15,7 @@ namespace Ak.Framework.Core.IO
         #region Публиные методы
 
         /// <summary>
-        /// Проверка на то, что путьт в файловой системе существует
+        /// Проверка на то, что путь в файловой системе существует
         /// </summary>
         /// <param name="path">Путь</param>
         /// <returns></returns>
@@ -56,6 +57,16 @@ namespace Ak.Framework.Core.IO
         public static void ThrowIfInvalid(string path)
         {
             ThrowHelper.CheckTrue(IsPathValid(path), "Invalid path specified.");
+        }
+
+        /// <summary>
+        /// Объединение относительного пути и пути расположения сборки
+        /// </summary>
+        /// <param name="relativePath">Относительный путь</param>
+        /// <returns></returns>
+        public static string GetFilePathForCurrentAppDomainBaseDirectory(string relativePath)
+        {
+            return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, relativePath);
         }
 
         #endregion

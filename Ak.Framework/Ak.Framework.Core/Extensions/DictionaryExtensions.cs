@@ -45,5 +45,25 @@ namespace Ak.Framework.Core.Extensions
             
             return result;
         }
+
+        /// <summary>
+        /// Преобразование в массив
+        /// </summary>
+        /// <typeparam name="TKey">Тип ключа</typeparam>
+        /// <typeparam name="TValue">Тип значения</typeparam>
+        /// <param name="dictionary">Словарь</param>
+        /// <returns></returns>
+        public static TValue[] ConvertToArray<TKey, TValue>(this Dictionary<TKey, TValue> dictionary)
+        {
+            TValue[] array = new TValue[dictionary.Keys.Count];
+
+            int index = 0;
+            foreach (TKey key in dictionary.Keys)
+            {
+                array[index] = dictionary[key];
+                index++;
+            }
+            return array;
+        }
     }
 }
