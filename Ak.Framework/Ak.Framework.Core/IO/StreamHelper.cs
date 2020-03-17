@@ -83,5 +83,20 @@ namespace Ak.Framework.Core.IO
                     fileInfo.Delete();
             }
         }
+
+        /// <summary>
+        /// Создание потока из строки
+        /// </summary>
+        /// <param name="inputString">Входящая строка</param>
+        /// <returns></returns>
+        public static Stream CreateStream(string inputString)
+        {
+            MemoryStream stream = new MemoryStream();
+            StreamWriter writer = new StreamWriter(stream);
+            writer.Write(inputString);
+            writer.Flush();
+            stream.Position = 0;
+            return stream;
+        }
     }
 }
