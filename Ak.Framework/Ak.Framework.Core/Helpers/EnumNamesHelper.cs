@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Web.Caching;
 using System.Web.UI.WebControls;
 using Ak.Framework.Core.Attributes;
+using Ak.Framework.Core.Extensions;
 
 namespace Ak.Framework.Core.Helpers
 {
@@ -204,6 +205,18 @@ namespace Ak.Framework.Core.Helpers
                     return value;
 
             return null;
+        }
+
+        /// <summary>
+        /// Получение значения инумератора по названию
+        /// </summary>
+        /// <typeparam name="T">Тип</typeparam>
+        /// <param name="enumName">Название значения инумератора</param>
+        /// <param name="comparisonType">Способ сравнения</param>
+        /// <returns></returns>
+        public static T GetEnumByName<T>(string enumName, StringComparison comparisonType = StringComparison.InvariantCultureIgnoreCase)
+        {
+            return GetValues<T>().FirstOrDefault(x => x.ToStr().Equals(enumName, comparisonType));
         }
 
         #endregion       

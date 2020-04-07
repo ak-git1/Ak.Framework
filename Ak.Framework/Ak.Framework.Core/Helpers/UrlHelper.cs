@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using System;
+using System.Web;
 
 namespace Ak.Framework.Core.Helpers
 {
@@ -21,6 +22,18 @@ namespace Ak.Framework.Core.Helpers
             if (appPath != null && !appPath.EndsWith("/"))
                 appPath += "/";
             return appPath;
+        }
+
+        /// <summary>
+        /// Объединение путей
+        /// </summary>
+        /// <param name="baseUrl">Базовый Url</param>
+        /// <param name="relativeUrl">Относительный Url</param>
+        /// <returns></returns>
+        public static string CombineUrls(string baseUrl, string relativeUrl)
+        {
+            Uri baseUri = new Uri(baseUrl);
+            return new Uri(baseUri, relativeUrl).ToString();
         }
     }
 }
