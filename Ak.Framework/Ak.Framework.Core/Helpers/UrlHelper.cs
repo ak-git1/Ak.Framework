@@ -45,7 +45,7 @@ namespace Ak.Framework.Core.Helpers
         /// <returns></returns>
         public static string GenerateArgumentsString(Dictionary<string, string> arguments)
         {
-            return HttpUtility.UrlEncode(string.Join("&", arguments.Select(kvp => $"{kvp.Key}={kvp.Value}")));
+            return string.Join("&", arguments.Select(kvp => $"{HttpUtility.UrlEncode(kvp.Key)}={HttpUtility.UrlEncode(kvp.Value)}"));
         }
     }
 }
