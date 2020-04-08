@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using Ak.Framework.Core.Enums;
 
 namespace Ak.Framework.Core.Extensions
@@ -462,6 +464,17 @@ namespace Ak.Framework.Core.Extensions
                 firstMonthMonday = firstMonthDay.AddDays((DayOfWeek.Monday + 7 - firstMonthDay.DayOfWeek) % 7);
             }
             return (date - firstMonthMonday).Days / 7 + 1;
+        }
+
+        /// <summary>
+        /// Получение списка дат в рамках диапазона
+        /// </summary>
+        /// <param name="startDate">Начальная дата</param>
+        /// <param name="endDate">Конечная дата</param>
+        /// <returns></returns>
+        public static IEnumerable<DateTime> Range(this DateTime startDate, DateTime endDate)
+        {
+            return Enumerable.Range(0, (endDate - startDate).Days + 1).Select(d => startDate.AddDays(d));
         }
     }
 }
